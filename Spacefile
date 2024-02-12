@@ -1,0 +1,13 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+icon : ./static/favicon_io/android-chrome-512x512.png
+micros:
+  - name: RapidSnip
+    src: ./
+    engine: python3.9
+    primary: true
+    run: gunicorn main:app
+    commands:
+      - pip install -r requirements.txt
+    public_routes:
+      - "/s/*"

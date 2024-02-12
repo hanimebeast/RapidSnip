@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}RapidSnip - Link Shortener{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Link Shortener</h1>
+    <form action="/shorten" method="post" class="mt-4">
+        <div class="mb-3">
+            <label for="original_url" class="form-label">Original URL:</label>
+            <input type="url" id="original_url" name="original_url" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="custom_id" class="form-label">Custom ID (optional):</label>
+            <input type="text" id="custom_id" name="custom_id" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Shorten</button>
+    </form>
+</div>
+{% endblock %}

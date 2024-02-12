@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}RapidSnip - Shorted Link{% endblock title %}
+{% block content %}
+<div class="container mt-5">
+    <div class="alert alert-success" role="alert">
+        <h3>Link Shortened Successfully!</h3>
+        <p>Your short link is: <a href="{{ url_for('redirect_to_original', short_id=short_id) }}" target="_blank">{{ url_for('redirect_to_original', short_id=short_id) }}</a></p>
+    </div>
+</div>
+{% endblock content %}
