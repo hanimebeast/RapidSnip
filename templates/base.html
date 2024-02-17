@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}RapidSnip{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon_io/favicon.ico')}}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -19,31 +21,6 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body fixed-top">
-          <div class="container-fluid">
-            <button
-              data-mdb-collapse-init
-              class="navbar-toggler"
-              type="button"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarExample01">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Create</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('list_links') }}">Shorted Links</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
         <div class="p-5 text-center bg-body-tertiary" style="margin-top: 58px;">
           <h1 class="mb-3">RapidSnip</h1>
           <h6 class="mb-3 badge badge-success">Rapid Link Shortner</h6>
